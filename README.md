@@ -31,11 +31,12 @@ Based in Paris, France.
 ## Experience
 
 - **Software Engineer**, xpln.ai (Sep 2026 to now)
-- **IS Analyst intern**, VINCI Construction SI (Jan to Jun 2026): product specs, adoption analytics (Piano Analytics, Microsoft Clarity, Power BI), level-3 support
+- **Associate Product Manager intern**, VINCI Construction IT (Jan to Jun 2026): owned a budget control application (specs, prioritisation, test strategy), adoption analytics (Piano Analytics, Microsoft Clarity, Power BI), level-3 production support
 - **Exchange semester**, Tecnológico de Monterrey, Mexico (Aug to Dec 2025)
+- **Classes préparatoires MPSI/MP\***, Lycée Chaptal, Paris (2021 to 2023)
 
 ## Tech
 
-Python · SQL · Apache Airflow · FastAPI · Pydantic · pandas · scikit-learn · PostgreSQL · Docker · Git / GitHub Actions · Power BI · Java
+Python · SQL · Apache Airflow · FastAPI · Pydantic · pandas · NumPy · scikit-learn · PyTorch · PostgreSQL · Docker · Git / GitHub Actions · Power BI · Java
 
-Languages: French (native), English (professional), Spanish (basic)
+Languages: French (native), English (C1), Spanish (B1)
