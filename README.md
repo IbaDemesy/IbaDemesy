@@ -31,7 +31,7 @@ I like building AI agents that do real work, with strict safety limits. Outside 
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/IbaDemesy/portofolio">Engineering school projects</a></h4>
+      <h4><a href="https://github.com/IbaDemesy/telecom-paris-projects">Engineering school projects</a></h4>
       <p>A Raspberry Pi robot car with a web control interface, a Java factory-robot simulator and a movie data analysis.</p>
       <img src="https://img.shields.io/badge/Raspberry%20Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white" alt="Raspberry Pi"/> <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/> <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="pandas"/>
     </td>
