@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer in Paris. Building data pipelines with Apache Airflow, shipping AI agents that stop before you pay, Télécom Paris Data Science and Strategy graduate. 550 runners organised at the Ekiden du Platal, 3rd prize at the Swarm Rescue drone challenge, 3 agents in parallel in RunAI v2."/>
+  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer at xpln.ai, Paris. Ad bidding, dbt, Airflow, GCP, backend and frontend."/>
 </p>
 
 <p align="center">
@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-  <img src="assets/experience.svg" width="100%" alt="Experience. Software Engineer at xpln.ai, Paris, full-time, since September 2026: data pipelines with Apache Airflow, Python and SQL. IS Analyst Intern at VINCI Construction IT, Business Solutions and Adoption, January to June 2026: owned a budget-control application (business requirements, specs, IT test strategy), adoption analytics with Piano Analytics, Microsoft Clarity and Power BI dashboards, level-3 production support with the development teams."/>
+  <img src="assets/experience.svg" width="100%" alt="Experience. Software Engineer at xpln.ai, Paris, full-time, since September 2026: ad bidding, dbt, Airflow, GCP, Python, SQL. IS Analyst Intern at VINCI Construction IT, Business Solutions and Adoption, January to June 2026: budget-control application (business requirements, specs and IT test strategy), adoption analytics with Piano Analytics and Microsoft Clarity, Power BI dashboards, level-3 production support with the development teams."/>
 </p>
 
 <p align="center">
-  <a href="https://github.com/IbaDemesy/runai-v2"><img src="assets/project.svg" width="100%" alt="Featured project: RunAI v2, a race-trip assistant for runners. Describe the race you want; RunAI finds real races with official dates through Linkup, then three browser agents prepare registration, hotel and transport in parallel and stop before any payment. Python, FastAPI, Pydantic, pytest. Started at the Computer Use Agents Hackathon, H Company x 42AI, November 2026."/></a>
+  <a href="https://github.com/IbaDemesy/runai-v2"><img src="assets/project.svg" width="100%" alt="Featured project: RunAI v2, a race-trip planner for runners. Finds real races with official dates (Linkup), then three browser agents (H Company) prepare registration, hotel and transport in parallel. They stop before any payment or account creation. Python, FastAPI, Pydantic, JavaScript, pytest. Started at the Computer Use Agents Hackathon, H Company x 42AI, November 2026."/></a>
 </p>
 
 <p align="center">
@@ -21,5 +21,5 @@
 </p>
 
 <p align="center">
-  <img src="assets/stack.svg" width="100%" alt="Stack. Data: Apache Airflow, Python, SQL, PostgreSQL, pandas, NumPy, Power BI. AI and backend: AI agents, FastAPI, Pydantic, PyTorch, scikit-learn, httpx. Tools: Git, GitHub Actions, Docker, Linux, Java, Raspberry Pi. Languages: French native, English C1, Spanish B1."/>
+  <img src="assets/stack.svg" width="100%" alt="Stack. Data: dbt, Airflow, GCP, SQL, Python, pandas, scikit-learn. Backend: FastAPI, Pydantic, PostgreSQL, Docker, pytest. Frontend: JavaScript, HTML, CSS. Tools: Git, GitHub Actions, Linux, Power BI. Languages: French native, English C1, Spanish B1."/>
 </p>
