@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer at xpln.ai, Paris. Ad bidding, dbt, Airflow, GCP."/>
+  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer at xpln.ai, Paris. Adtech, ML bidding algorithms, dbt, Airflow, GCP."/>
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/experience.svg" width="100%" alt="Experience. Software Engineer at xpln.ai, Paris, full-time, since September 2026: ad bidding, dbt, Airflow, GCP, Python, SQL. IS Analyst Intern at VINCI Construction IT, Business Solutions and Adoption, January to June 2026: budget-control application (business requirements, specs and IT test strategy), adoption analytics with Piano Analytics and Microsoft Clarity, Power BI dashboards, level-3 production support with the development teams."/>
+  <img src="assets/experience.svg" width="100%" alt="Experience. Software Engineer at xpln.ai, Paris, full-time, since September 2026, Targeting & Optimization in adtech: bidding algorithms with machine learning; dbt, Airflow, GCP, Python, SQL. IS Analyst Intern at VINCI Construction IT, Business Solutions and Adoption, January to June 2026: budget-control application (business requirements, specs and IT test strategy), adoption analytics with Piano Analytics and Microsoft Clarity, Power BI dashboards, level-3 production support with the development teams."/>
 </p>
 
 <p align="center">
