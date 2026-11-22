@@ -75,7 +75,7 @@ def hero():
 {t(60, 178, "Iba Demesy", 92, FG, SANS, 800, 'letter-spacing="-3"')}
 <rect x="64" y="200" width="120" height="4" fill="url(#og)"/>
 {t(64, 250, "Software Engineer @ xpln.ai", 26, FG, SANS, 600)}
-{t(64, 286, "Ad bidding  ·  dbt  ·  Airflow  ·  GCP", 16, "#BDBDBD", MONO, 400, 'xml:space="preserve"')}
+{t(64, 286, "Adtech  ·  ML bidding  ·  dbt  ·  Airflow  ·  GCP", 16, "#BDBDBD", MONO, 400, 'xml:space="preserve"')}
 <g transform="translate(180 15) scale(0.82)">
 <path d="{route}" fill="none" stroke="{OR}" stroke-opacity="0.18" stroke-width="10" stroke-linecap="round" filter="url(#blur)"/>
 <path d="{route}" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/>
@@ -90,23 +90,24 @@ def hero():
 
 # ---------------------------------------------------------------- experience
 def experience():
-    h = 400
+    h = 430
     body = header(1, "Experience")
-    body += f'<line x1="56" y1="96" x2="56" y2="356" stroke="#262626" stroke-width="2"/>'
+    body += f'<line x1="56" y1="96" x2="56" y2="386" stroke="#262626" stroke-width="2"/>'
     body += f'''<circle cx="56" cy="104" r="7" fill="{OR}"/><circle cx="56" cy="104" r="7" fill="none" stroke="{OR}" stroke-width="2"><animate attributeName="r" values="7;20" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.6s" repeatCount="indefinite"/></circle>'''
     body += g_fade(0, t(88, 112, "Software Engineer", 28, FG, SANS, 700)
                    + t(960, 112, "SEP 2026 — NOW", 13, OR, MONO, 700, 'text-anchor="end" letter-spacing="1.5"')
-                   + t(88, 138, "xpln.ai  ·  Paris  ·  Full-time", 15, MUT)
-                   + pills(88, 154, ["Ad bidding", "dbt", "Airflow", "GCP", "Python", "SQL"]))
-    body += f'<circle cx="56" cy="232" r="6" fill="{BG}" stroke="#666" stroke-width="2"/>'
+                   + t(88, 138, "xpln.ai  ·  Adtech  ·  Targeting & Optimization  ·  Paris  ·  Full-time", 15, MUT)
+                   + f'<rect x="90" y="161" width="8" height="2" fill="{OR}"/>' + t(110, 167, "Bidding algorithms with machine learning", 14.5, "#CFCFCF")
+                   + pills(88, 184, ["Machine learning", "Bidding", "dbt", "Airflow", "GCP", "Python", "SQL"]))
+    body += f'<circle cx="56" cy="262" r="6" fill="{BG}" stroke="#666" stroke-width="2"/>'
     lines = ["Budget-control application: business requirements, specs and IT test strategy",
              "Adoption analytics with Piano Analytics and Microsoft Clarity; Power BI dashboards",
              "Level-3 production support with the development teams"]
-    inner = (t(88, 240, "IS Analyst Intern", 24, FG, SANS, 700)
-             + t(960, 240, "JAN — JUN 2026", 13, MUT, MONO, 700, 'text-anchor="end" letter-spacing="1.5"')
-             + t(88, 264, "VINCI Construction IT  ·  Business Solutions & Adoption", 15, MUT))
+    inner = (t(88, 270, "IS Analyst Intern", 24, FG, SANS, 700)
+             + t(960, 270, "JAN — JUN 2026", 13, MUT, MONO, 700, 'text-anchor="end" letter-spacing="1.5"')
+             + t(88, 294, "VINCI Construction IT  ·  Business Solutions & Adoption", 15, MUT))
     for i, l in enumerate(lines):
-        y = 298 + i * 26
+        y = 328 + i * 26
         inner += f'<rect x="90" y="{y-9}" width="8" height="2" fill="{OR}"/>' + t(110, y - 3, l, 14.5, "#CFCFCF")
     body += g_fade(2, inner)
     (OUT / "experience.svg").write_text(frame(h, body))
