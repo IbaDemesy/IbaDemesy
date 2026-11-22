@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer at xpln.ai, Paris. Adtech, ML bidding algorithms, dbt, Airflow, GCP."/>
+  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer at xpln.ai, Paris. Adtech, ML bidding algorithms, dbt, Airflow, GCP. Hi, welcome to my GitHub! Software engineer by day, runner the rest of the time."/>
 </p>
 
 <p align="center">
