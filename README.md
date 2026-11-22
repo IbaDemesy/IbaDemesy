@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer at xpln.ai, Paris. Ad bidding, dbt, Airflow, GCP, backend and frontend."/>
+  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer at xpln.ai, Paris. Ad bidding, dbt, Airflow, GCP."/>
 </p>
 
 <p align="center">
@@ -21,5 +21,5 @@
 </p>
 
 <p align="center">
-  <img src="assets/stack.svg" width="100%" alt="Stack. Data: dbt, Airflow, GCP, SQL, Python, pandas, scikit-learn. Backend: FastAPI, Pydantic, PostgreSQL, Docker, pytest. Frontend: JavaScript, HTML, CSS. Tools: Git, GitHub Actions, Linux, Power BI. Languages: French native, English C1, Spanish B1."/>
+  <img src="assets/stack.svg" width="100%" alt="Stack. Data: dbt, Airflow, GCP, SQL, Python, pandas, scikit-learn. Tools: Git, GitHub Actions, Docker, Linux, FastAPI, pytest, Power BI. Languages: French native, English C1, Spanish B1."/>
 </p>
