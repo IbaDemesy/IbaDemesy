@@ -62,58 +62,29 @@ def header(num, title, y=46):
 
 # ---------------------------------------------------------------- hero
 def hero():
-    h = 440
-    phrases = ["building data pipelines with Apache Airflow",
-               "shipping AI agents that stop before you pay",
-               "Télécom Paris · Data Science & Strategy"]
-    n, dur, x0, y0, cw = len(phrases), 12, 64, 252, 22 * 0.6
-    # each phrase: types in [s-0.10, s], holds to s+0.20, erases by s+0.23; phrase 0 is shown at t=0
-    widths = [len(p) * cw * 1.08 + 8 for p in phrases]
-    typing = []
-    cur = []
-    for i, wmax in enumerate(widths):
-        st = i / n
-        if i == 0:
-            pts = [(0, wmax), (0.20, wmax), (0.23, 0), (0.90, 0), (1, wmax)]
-        else:
-            pts = [(0, 0), (st - 0.10, 0), (st, wmax), (st + 0.20, wmax), (st + 0.23, 0), (1, 0)]
-        vals = ";".join(f"{v:.0f}" for _, v in pts)
-        kt = ";".join(f"{k:.4f}" for k, _ in pts)
-        typing.append(f'''<clipPath id="c{i}"><rect x="{x0}" y="{y0-24}" width="{pts[0][1]:.0f}" height="34"><animate attributeName="width" values="{vals}" keyTimes="{kt}" dur="{dur}s" repeatCount="indefinite"/></rect></clipPath>''')
-        if i:
-            cur += [(st - 0.10, 0), (st, wmax), (st + 0.20, wmax), (st + 0.23, 0)]
-    cur = [(0, widths[0]), (0.20, widths[0]), (0.23, 0)] + cur + [(0.90, 0), (1, widths[0])]
-    cur_kt = [k for k, _ in cur]
-    cur_vals = [x0 + 4 + v for _, v in cur]
-    defs = "".join(typing) + f'''
+    h = 400
+    defs = f'''
 <radialGradient id="glow" cx="0.78" cy="0.45" r="0.55"><stop offset="0" stop-color="{OR}" stop-opacity="0.28"/><stop offset="1" stop-color="{OR}" stop-opacity="0"/></radialGradient>
 <linearGradient id="elev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{OR}" stop-opacity="0.55"/><stop offset="1" stop-color="{OR}" stop-opacity="0"/></linearGradient>
 <filter id="blur"><feGaussianBlur stdDeviation="4"/></filter>'''
-    route = "M600 300 C640 250 650 190 700 175 S780 205 805 150 S860 80 905 110 S935 190 890 230 S800 250 770 290 S700 330 650 320"
-    elev = "M0 440 L0 400 C80 395 120 370 190 378 S300 400 360 372 S470 330 540 350 S640 395 720 360 S820 300 880 330 S960 380 1000 360 L1000 440 Z"
+    route = "M600 290 C640 240 650 180 700 165 S780 195 805 140 S860 70 905 100 S935 180 890 220 S800 240 770 280 S700 320 650 310"
+    elev = "M0 400 L0 360 C80 355 120 330 190 338 S300 360 360 332 S470 290 540 310 S640 355 720 320 S820 260 880 290 S960 340 1000 320 L1000 400 Z"
     body = f'''<rect width="{W}" height="{h}" rx="18" fill="url(#glow)"/>
-<path d="{elev}" fill="url(#elev)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.45;0.2" dur="6s" repeatCount="indefinite"/></path>
-{t(64, 86, "// SOFTWARE ENGINEER · PARIS, FRANCE", 14, OR, MONO, 700, 'letter-spacing="2"')}
+<path d="{elev}" fill="url(#elev)" opacity="0.3"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="6s" repeatCount="indefinite"/></path>
+{t(64, 86, "// PARIS, FRANCE", 14, OR, MONO, 700, 'letter-spacing="2"')}
 {t(60, 178, "Iba Demesy", 92, FG, SANS, 800, 'letter-spacing="-3"')}
 <rect x="64" y="200" width="120" height="4" fill="url(#og)"/>
-{t(x0 - 2, y0, ">", 22, OR, MONO, 700)}
-''' + "".join(f'<g clip-path="url(#c{i})">{t(x0 + 22, y0, p, 22, "#E8E8E8", MONO)}</g>' for i, p in enumerate(phrases)) + f'''
-<rect x="{cur_vals[0] + 18:.0f}" y="{y0 - 19}" width="11" height="24" fill="{OR}"><animate attributeName="x" values="{';'.join(f'{v + 18:.0f}' for v in cur_vals)}" keyTimes="{';'.join(f'{k:.4f}' for k in cur_kt)}" dur="{dur}s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/></rect>
+{t(64, 250, "Software Engineer @ xpln.ai", 26, FG, SANS, 600)}
+{t(64, 286, "Ad bidding  ·  dbt  ·  Airflow  ·  GCP  ·  Backend & frontend", 16, "#BDBDBD", MONO, 400, 'xml:space="preserve"')}
+<g transform="translate(180 15) scale(0.82)">
 <path d="{route}" fill="none" stroke="{OR}" stroke-opacity="0.18" stroke-width="10" stroke-linecap="round" filter="url(#blur)"/>
 <path d="{route}" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/>
 <path id="route" d="{route}" fill="none" stroke="url(#og)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1200" stroke-dashoffset="1200"><animate attributeName="stroke-dashoffset" values="1200;0;0" keyTimes="0;0.7;1" dur="5s" repeatCount="indefinite"/></path>
 <circle r="16" fill="{OR}" opacity="0.25"><animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.7;1" calcMode="linear"><mpath href="#route"/></animateMotion><animate attributeName="r" values="10;18;10" dur="1.2s" repeatCount="indefinite"/></circle>
 <circle r="6" fill="#fff" stroke="{OR}" stroke-width="3"><animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.7;1" calcMode="linear"><mpath href="#route"/></animateMotion></circle>
-<circle cx="600" cy="300" r="5" fill="{OR}"/>{t(612, 318, "START", 11, OR, MONO, 700, 'letter-spacing="2"')}
-{t(842, 66, "42.195 KM", 13, OR, MONO, 700, 'letter-spacing="2"')}
+<circle cx="600" cy="290" r="5" fill="{OR}"/>
+</g>
 '''
-    stats = [("550", "runners organised", "Ekiden du Platal"),
-             ("3RD", "prize, drone swarm", "Swarm Rescue 25-26"),
-             ("3", "agents in parallel", "RunAI v2")]
-    for i, (big, l1, l2) in enumerate(stats):
-        x = 64 + i * 180
-        body += g_fade(i + 2, t(x, 334, big, 38, FG, SANS, 800) + t(x, 358, l1, 13, "#CFCFCF", SANS) + t(x, 376, l2.upper(), 10, MUT, MONO, 400, 'letter-spacing="1.5"'))
-    body += f'<line x1="64" y1="300" x2="560" y2="300" stroke="{LINE}"/>'
     (OUT / "hero.svg").write_text(frame(h, body, defs))
 
 
@@ -126,11 +97,11 @@ def experience():
     body += g_fade(0, t(88, 112, "Software Engineer", 28, FG, SANS, 700)
                    + t(960, 112, "SEP 2026 — NOW", 13, OR, MONO, 700, 'text-anchor="end" letter-spacing="1.5"')
                    + t(88, 138, "xpln.ai  ·  Paris  ·  Full-time", 15, MUT)
-                   + pills(88, 154, ["Apache Airflow", "Data pipelines", "Python", "SQL"], hot={"Apache Airflow"}))
+                   + pills(88, 154, ["Ad bidding", "dbt", "Airflow", "GCP", "Python", "SQL"]))
     body += f'<circle cx="56" cy="232" r="6" fill="{BG}" stroke="#666" stroke-width="2"/>'
-    lines = ["Owned a budget-control application: business requirements, specs, IT test strategy",
+    lines = ["Budget-control application: business requirements, specs and IT test strategy",
              "Adoption analytics with Piano Analytics and Microsoft Clarity; Power BI dashboards",
-             "Level-3 production support, steering fixes with the development teams"]
+             "Level-3 production support with the development teams"]
     inner = (t(88, 240, "IS Analyst Intern", 24, FG, SANS, 700)
              + t(960, 240, "JAN — JUN 2026", 13, MUT, MONO, 700, 'text-anchor="end" letter-spacing="1.5"')
              + t(88, 264, "VINCI Construction IT  ·  Business Solutions & Adoption", 15, MUT))
@@ -147,13 +118,13 @@ def project():
     body = header(2, "Featured project")
     body += f'<rect x="40" y="76" width="920" height="320" rx="14" fill="#0A0A0A" stroke="url(#og)" stroke-opacity="0.7"/>'
     body += g_fade(0, t(72, 132, "RunAI v2", 46, FG, SANS, 800, 'letter-spacing="-1.5"')
-                   + t(72, 160, "RACE-TRIP ASSISTANT FOR RUNNERS", 12, OR, MONO, 700, 'letter-spacing="2"'))
-    desc = ["Describe the race you want. RunAI finds real races",
-            "with official dates, then three browser agents prepare",
-            "registration, hotel and transport in parallel,",
-            "and stop before any payment."]
+                   + t(72, 160, "RACE-TRIP PLANNER FOR RUNNERS", 12, OR, MONO, 700, 'letter-spacing="2"'))
+    desc = ["Finds real races with official dates (Linkup), then",
+            "three browser agents (H Company) prepare registration,",
+            "hotel and transport in parallel. They stop before",
+            "any payment or account creation."]
     body += g_fade(1, "".join(t(72, 200 + i * 24, d, 16, "#CFCFCF") for i, d in enumerate(desc)))
-    body += g_fade(2, pills(72, 310, ["Python", "FastAPI", "Pydantic", "pytest"])
+    body += g_fade(2, pills(72, 310, ["Python", "FastAPI", "Pydantic", "JavaScript", "pytest"])
                    + t(72, 370, "Started at the Computer Use Agents Hackathon · H Company x 42AI · Nov 2026", 12, MUT, MONO))
     # agent flow diagram
     fx = 560
@@ -204,16 +175,17 @@ def education():
 
 # ---------------------------------------------------------------- stack
 def stack():
-    h = 290
+    h = 340
     body = header(4, "Stack")
-    groups = [("DATA", ["Apache Airflow", "Python", "SQL", "PostgreSQL", "pandas", "NumPy", "Power BI"], {"Apache Airflow"}),
-              ("AI & BACKEND", ["AI agents", "FastAPI", "Pydantic", "PyTorch", "scikit-learn", "httpx"], {"AI agents"}),
-              ("TOOLS", ["Git", "GitHub Actions", "Docker", "Linux", "Java", "Raspberry Pi"], set())]
+    groups = [("DATA", ["dbt", "Airflow", "GCP", "SQL", "Python", "pandas", "scikit-learn"], set()),
+              ("BACKEND", ["FastAPI", "Pydantic", "PostgreSQL", "Docker", "pytest"], set()),
+              ("FRONTEND", ["JavaScript", "HTML", "CSS"], set()),
+              ("TOOLS", ["Git", "GitHub Actions", "Linux", "Power BI"], set())]
     for i, (g, labs, hot) in enumerate(groups):
         y = 84 + i * 52
         body += g_fade(i, t(40, y + 19, g, 12, MUT, MONO, 700, 'letter-spacing="2"') + pills(190, y, labs, hot))
-    body += f'<line x1="40" y1="246" x2="960" y2="246" stroke="{LINE}"/>'
-    body += t(40, 272, "LANGUAGES", 12, MUT, MONO, 700, 'letter-spacing="2"') + "".join(t(190 + i * 200, 272, l, 14, FG, MONO) for i, l in enumerate(["French · native", "English · C1", "Spanish · B1"]))
+    body += f'<line x1="40" y1="296" x2="960" y2="296" stroke="{LINE}"/>'
+    body += t(40, 322, "LANGUAGES", 12, MUT, MONO, 700, 'letter-spacing="2"') + "".join(t(190 + i * 200, 322, l, 14, FG, MONO) for i, l in enumerate(["French · native", "English · C1", "Spanish · B1"]))
     (OUT / "stack.svg").write_text(frame(h, body))
 
 
