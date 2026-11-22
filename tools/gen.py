@@ -66,7 +66,7 @@ def km_counter(steps=28, dur=5, end=0.7):
     out = ""
     for i in range(steps + 1):
         km = 42.195 * i / steps
-        label = f"{km:06.3f} KM"
+        label = f"{km:06.3f} KM".replace(".", ",")
         t0, t1 = end * i / steps, end * (i + 1) / steps
         if i == 0:
             kt, vals = f"0;{t1:.4f}", "1;0"

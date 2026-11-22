@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer at xpln.ai, Paris. Adtech, ML bidding algorithms, dbt, Airflow, GCP. Hi, welcome to my GitHub! Software engineer by day, runner the rest of the time. Animated race route with a distance counter from 0 to 42.195 km."/>
+  <img src="assets/hero.svg" width="100%" alt="Iba Demesy, Software Engineer at xpln.ai, Paris. Adtech, ML bidding algorithms, dbt, Airflow, GCP. Hi, welcome to my GitHub! Software engineer by day, runner the rest of the time. Animated race route with a distance counter from 0 to 42,195 km."/>
 </p>
 
 <p align="center">
