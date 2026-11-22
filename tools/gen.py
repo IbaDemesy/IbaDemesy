@@ -61,6 +61,25 @@ def header(num, title, y=46):
 
 
 # ---------------------------------------------------------------- hero
+def km_counter(steps=28, dur=5, end=0.7):
+    """0 -> 42.195 KM, synced with the runner dot (reaches the finish at `end` of the loop)."""
+    out = ""
+    for i in range(steps + 1):
+        km = 42.195 * i / steps
+        label = f"{km:06.3f} KM"
+        t0, t1 = end * i / steps, end * (i + 1) / steps
+        if i == 0:
+            kt, vals = f"0;{t1:.4f}", "1;0"
+        elif i == steps:
+            kt, vals = f"0;{t0:.4f}", "0;1"
+        else:
+            kt, vals = f"0;{t0:.4f};{t1:.4f}", "0;1;0"
+        anim = f'<animate attributeName="opacity" values="{vals}" keyTimes="{kt}" calcMode="discrete" dur="{dur}s" repeatCount="indefinite"/>'
+        base = 1 if i == steps else 0
+        out += f'<text x="960" y="354" font-size="26" fill="{OR}" font-family="{MONO}" font-weight="700" text-anchor="end" opacity="{base}">{label}{anim}</text>'
+    return out
+
+
 def hero():
     h = 400
     defs = f'''
@@ -83,9 +102,10 @@ def hero():
 <path id="route" d="{route}" fill="none" stroke="url(#og)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1200" stroke-dashoffset="1200"><animate attributeName="stroke-dashoffset" values="1200;0;0" keyTimes="0;0.7;1" dur="5s" repeatCount="indefinite"/></path>
 <circle r="16" fill="{OR}" opacity="0.25"><animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.7;1" calcMode="linear"><mpath href="#route"/></animateMotion><animate attributeName="r" values="10;18;10" dur="1.2s" repeatCount="indefinite"/></circle>
 <circle r="6" fill="#fff" stroke="{OR}" stroke-width="3"><animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.7;1" calcMode="linear"><mpath href="#route"/></animateMotion></circle>
-<circle cx="600" cy="290" r="5" fill="{OR}"/>
+<circle cx="600" cy="290" r="5" fill="{OR}"/>{t(586, 295, "START", 11, OR, MONO, 700, 'text-anchor="end" letter-spacing="2"')}
 </g>
-'''
+{t(960, 322, "DISTANCE", 11, MUT, MONO, 700, 'text-anchor="end" letter-spacing="2"')}
+''' + km_counter()
     (OUT / "hero.svg").write_text(frame(h, body, defs))
 
 
