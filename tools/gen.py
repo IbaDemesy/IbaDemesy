@@ -75,7 +75,7 @@ def hero():
 {t(60, 178, "Iba Demesy", 92, FG, SANS, 800, 'letter-spacing="-3"')}
 <rect x="64" y="200" width="120" height="4" fill="url(#og)"/>
 {t(64, 250, "Software Engineer @ xpln.ai", 26, FG, SANS, 600)}
-{t(64, 286, "Ad bidding  ·  dbt  ·  Airflow  ·  GCP  ·  Backend & frontend", 16, "#BDBDBD", MONO, 400, 'xml:space="preserve"')}
+{t(64, 286, "Ad bidding  ·  dbt  ·  Airflow  ·  GCP", 16, "#BDBDBD", MONO, 400, 'xml:space="preserve"')}
 <g transform="translate(180 15) scale(0.82)">
 <path d="{route}" fill="none" stroke="{OR}" stroke-opacity="0.18" stroke-width="10" stroke-linecap="round" filter="url(#blur)"/>
 <path d="{route}" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/>
@@ -175,17 +175,15 @@ def education():
 
 # ---------------------------------------------------------------- stack
 def stack():
-    h = 340
+    h = 236
     body = header(4, "Stack")
     groups = [("DATA", ["dbt", "Airflow", "GCP", "SQL", "Python", "pandas", "scikit-learn"], set()),
-              ("BACKEND", ["FastAPI", "Pydantic", "PostgreSQL", "Docker", "pytest"], set()),
-              ("FRONTEND", ["JavaScript", "HTML", "CSS"], set()),
-              ("TOOLS", ["Git", "GitHub Actions", "Linux", "Power BI"], set())]
+              ("TOOLS", ["Git", "GitHub Actions", "Docker", "Linux", "FastAPI", "pytest", "Power BI"], set())]
     for i, (g, labs, hot) in enumerate(groups):
         y = 84 + i * 52
         body += g_fade(i, t(40, y + 19, g, 12, MUT, MONO, 700, 'letter-spacing="2"') + pills(190, y, labs, hot))
-    body += f'<line x1="40" y1="296" x2="960" y2="296" stroke="{LINE}"/>'
-    body += t(40, 322, "LANGUAGES", 12, MUT, MONO, 700, 'letter-spacing="2"') + "".join(t(190 + i * 200, 322, l, 14, FG, MONO) for i, l in enumerate(["French · native", "English · C1", "Spanish · B1"]))
+    body += f'<line x1="40" y1="192" x2="960" y2="192" stroke="{LINE}"/>'
+    body += t(40, 218, "LANGUAGES", 12, MUT, MONO, 700, 'letter-spacing="2"') + "".join(t(190 + i * 200, 218, l, 14, FG, MONO) for i, l in enumerate(["French · native", "English · C1", "Spanish · B1"]))
     (OUT / "stack.svg").write_text(frame(h, body))
 
 
