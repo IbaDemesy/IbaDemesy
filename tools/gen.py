@@ -76,6 +76,7 @@ def hero():
 <rect x="64" y="200" width="120" height="4" fill="url(#og)"/>
 {t(64, 250, "Software Engineer @ xpln.ai", 26, FG, SANS, 600)}
 {t(64, 286, "Adtech  ·  ML bidding  ·  dbt  ·  Airflow  ·  GCP", 16, "#BDBDBD", MONO, 400, 'xml:space="preserve"')}
+{t(64, 334, "Hi, welcome to my GitHub! Software engineer by day, runner the rest of the time.", 16, MUT, SANS, 400)}
 <g transform="translate(180 15) scale(0.82)">
 <path d="{route}" fill="none" stroke="{OR}" stroke-opacity="0.18" stroke-width="10" stroke-linecap="round" filter="url(#blur)"/>
 <path d="{route}" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/>
